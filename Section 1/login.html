@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+
+    <style>
+
+        .my-card{
+            /* border: 2px solid red; */
+            width: 25%;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 2px 2px 5px 2px #0000006c;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-image: linear-gradient(45deg,#fffeae,#bcbce9); */
+            /* background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-ppt-template-background-illustration-simple-geometric-wind-picture-image_934732.jpg); */
+            background-image: linear-gradient(11deg,#fffeae34,#bcbce9),url(https://png.pngtree.com/background/20210709/original/pngtree-ppt-template-background-illustration-simple-geometric-wind-picture-image_934732.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .my-input{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .my-btn{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: crimson;
+            color: white;
+            border: none;
+            /* margin-top: 40px; */
+        }
+
+        .form-title{
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: Roboto;
+        }
+
+        *{
+            font-family: Roboto;
+        }
+
+        .logo{
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="my-card">
+
+        <form>
+
+            <img src="https://www.freepnglogos.com/uploads/hogwarts-logo-png/hogwarts-logo-shadopro-deviantart-0.png" class="logo">
+
+            <h2 class="form-title">Login Form</h2>
+
+            <label>Email Address</label>
+            <input class="my-input" type="email">
+
+            <label>Password</label>
+            <input class="my-input" type="password">
+
+            <button class="my-btn">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
