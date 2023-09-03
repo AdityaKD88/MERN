@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        p{
+            font-size: 50px;
+            text-align: center;
+            color: blue;
+        }
+
+        .myclass{
+            font-size: 60px;
+            background-color: crimson;
+            color: white;
+        }
+
+        #myid{
+            font-size: 70px;
+            text-align: right;
+            color: green;
+            text-decoration: underline;
+        }
+
+        .myclass3{
+            color: coral;
+        }
+
+        .myclass2{
+            color: crimson;
+        }
+
+
+        h3{
+            color: aqua;
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+
+    <h2 style="color: red; font-size: 30px;" >Inline CSS is used to apply CSS on individual tags only.</h2>
+
+    <p>Internal CSS is used style entire page at once</p>
+
+    <p>Name Selector is used to select element by their tag name</p>
+
+    <p class="myclass">Class Selector is used to select element by their class name</p>
+
+    <h2 class="myclass">Using Class Selector</h2>
+
+    <h3 id="myid" class="myclass2">ID Selector is used to select element by their id name</h3>
+
+    <h4 style="font-size: 50px;color: darkmagenta;" class="myclass2 myclass3">Using Same Selector</h4>
+
+    <h1 class="ext-class myclass3">External CSS is used apply CSS on multiple pages at once</h1>
+
+</body>
+</html>

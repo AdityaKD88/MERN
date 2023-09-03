@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+</head>
+
+<body>
+
+    <h2>Student Admission Form</h2>
+    <hr>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" required minlength="3" maxlength="10">
+
+        <br>
+        <br>
+
+        <label>Email Address</label>
+        <input type="email" required>
+
+        <br>
+        <br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <br>
+        <br>
+
+        <label>Address</label>
+        <textarea cols="30" rows="5"></textarea>
+
+        <br>
+        <br>
+
+        <label>City</label>
+        <select>
+            <option>Lucknow</option>
+            <option>Noida</option>
+            <option>Gurugram</option>
+            <option>Bangalore</option>
+            <option>Mumbai</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Board of Intermediate</label>
+        <input type="text" list="board">
+
+        <datalist id="board">
+            <option>UP Board</option>
+            <option>ISC Board </option>
+            <option>CBSE Board </option>
+        </datalist>
+
+        <br><br>
+
+        <label>Date Of Birth</label>
+        <input type="date">
+
+        <br><br>
+
+        <label>Upload Image</label>
+        <input type="file">
+
+        <br><br>
+
+        <label>Enter Password</label>
+        <input type="password">
+
+        <br><br>
+
+        <input type="checkbox" required>
+        <label>Accept Terms & Conditions</label>
+
+        <details>
+            <summary>Terms & Conditions</summary>
+            <p> Lorem ipsum dolor sit amet, <mark> consectetur adipisicing elit. </mark> Ipsam vero id nemo molestiae veritatis eveniet
+                ea maiores saepe rem quaerat. </p>
+        </details>
+
+        <br><br>
+
+        <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>
