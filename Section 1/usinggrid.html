@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS Grids</title>
+
+    <style>
+        section{
+            margin: 100px;
+            border: 2px solid crimson;
+            height: 70vh;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+        .section-img{
+            border: 2px solid green;
+            margin: auto;
+        }
+
+        .section-content{
+            border: 2px solid blue;
+            margin: auto 0;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <section>
+        <div class="section-img">
+            <img style="width: 100%;" src="https://profoundedutech.com/blog/wp-content/uploads/2022/05/step-to-become-a-full-stack-developer.png" alt="">
+        </div>
+        <div class="section-content">
+            <h1>Full Stack Development</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, quo.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolorem similique
+                quisquam est et perspiciatis in consectetur, nesciunt, esse culpa nihil facilis sunt minus
+                nostrum eos id! Culpa, dolorum atque!</p>
+
+            <button>Learn More</button>
+        </div>
+    </section>
+    
+</body>
+</html>
