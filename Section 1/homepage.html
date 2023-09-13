@@ -9,14 +9,37 @@
 
     <style>
         body{
-            background-color: beige;
+            background-color: beige;   
+        }
+
+        .my-btn{
+            width: 150px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0);
+            color: aliceblue;
+            border: 1px solid aliceblue;
+        }
+
+        .my-btn:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+
+        .my-sec{
+            border: 2px solid br;
+        }
+
+        .my-card{
+            display: flex;
+            align-items: center;
+            justify-content: center
         }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-sm navbar-light bg-lite">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">WANDERER</a>
             <div class="collapse navbar-collapse" id="navbarID">
                 <div class="navbar-nav">
@@ -33,134 +56,137 @@
     </nav>
 
     <header class="bg-dark text-white">
-        <div class="container py-5">
-            <h1>TO TRAVEL IS TO LOVE</h1>
-            <h5>You Don't need Magic to Disappear. All you need is a Destination</h5>
-            <div>
-                <button>Search on Map</button>
-                <button>More Info</button>
+        <div class="container py-4">
+            <h1 class="text-center">TO TRAVEL IS TO LOVE</h1>
+            <h5 class="text-center">You Don't need Magic to Disappear. All you need is a Destination</h5>
+            <div class="text-center">
+                <button class="my-btn">Search on Map</button>
+                <button class="my-btn">More Info</button>
             </div>
         </div>
     </header>
-    
-    <div class="container">
 
-        <div class="row">
-            <div class="col">
-                <h6>Find Your</h6>
-                <h5>Holidays</h5>
-            </div>
-            <div class="col">
-                <label for="where">Where</label>
-                <input class="my-input" type="text" placeholder="destination">
-                <label for="when">When</label>
-                <input type="date">
-                <button>Search</button>
-            </div>
+    <section class="row p-2 my-sec">
+        <div class="col-md-2 text-end">
+            <h6>Find Your</h6>
+            <h5>Holidays</h5>
         </div>
+        <div class="col-md-10">
+            <label for="where">Where</label>
+            <input class="my-input" type="text" placeholder="destination">
+            <label for="when">When</label>
+            <input type="date">
+            <button>Search</button>
+        </div>
+    </section>
 
-        <div class="row">
-            <h5>Top Destination</h5>
+    <div class="container py-5">
+        <div class="row text-center my-card py-5">
+            <h2>Top Destination</h2>
             <p>Best 2023 places where people love to stay!</p>
             
-            <div class="card">
-                <div class="col-md-3">
+            <div class="col-md-2">
+                <div class="card">
                     <img src="">
                     <div class="card-body">
                         <h6>Kyoto, Japan</h6>
-                        <h4>₹60,000 / per person</h4>
+                        <h5>₹60,000 / per person</h5>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="col-md-3">
+            <div class="col-md-2">
+                <div class="card">
                     <img src="">
                     <div class="card-body">
                         <h6>Kyoto, Japan</h6>
-                        <h4>₹60,000 / per person</h4>
+                        <h5>₹60,000 / per person</h5>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="col-md-3">
+            <div class="col-md-2">
+                <div class="card">
                     <img src="">
                     <div class="card-body">
                         <h6>Kyoto, Japan</h6>
-                        <h4>₹60,000 / per person</h4>
+                        <h5>₹60,000 / per person</h5>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="col-md-3">
+            <div class="col-md-2">
+                <div class="card">
                     <img src="">
                     <div class="card-body">
                         <h6>Kyoto, Japan</h6>
-                        <h4>₹60,000 / per person</h4>
+                        <h5>₹60,000 / per person</h5>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="col-md-2">
+            <div class="col-md-2">
+                <div class="card">
                     <img src="">
                     <div class="card-body">
                         <h6>Kyoto, Japan</h6>
-                        <h4>₹60,000 / per person</h4>
+                        <h5>₹60,000 / per person</h5>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <h6>Holidays Type</h6>
-            <div class="h-type">
-                <div class="col">
-                    <img src="" alt="">
-                    <h6>Cruse</h6>
-                </div>
+        <div class="row text-center py-5">
+            <h2>Holidays Type</h2> 
+            <div class="col">
+                <img src="" alt="">
+                <h6>Cruse</h6>
             </div>
-            <div class="h-type">
-                <div class="col">
-                    <img src="" alt="">
-                    <h6>Cruse</h6>
-                </div>
+            <div class="col">
+                <img src="" alt="">
+                <h6>City Breaks</h6>
             </div>
-            <div class="h-type">
-                <div class="col">
-                    <img src="" alt="">
-                    <h6>Cruse</h6>
-                </div>
+            <div class="col">
+                <img src="" alt="">
+                <h6>Adventure</h6>
             </div>
-            <div class="h-type">
-                <div class="col">
-                    <img src="" alt="">
-                    <h6>Cruse</h6>
-                </div>
+            <div class="col">
+                <img src="" alt="">
+                <h6>Safari</h6>
+            </div>
+            <div class="col">
+                <img src="" alt="">
+                <h6>Beach</h6>
+            </div>
+            <div class="col">
+                <img src="" alt="">
+                <h6>Honeymoon</h6>
             </div>
         </div>
 
-        <div class="row">
-            <h5>Happy Clients</h5>
+        <div class="row text-center py-5 my-card">
+            <h2>Happy Clients</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            <div class="card">
-                <div class="col-md-4">
+            <div class="col-md-4">
+                <div class="card">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates modi obcaecati
-                        in perspiciatis consequatur!</p>
+                        in perspiciatis consequatur! Lorem ipsum dolor sit amet.</p>
+                    <p>-Client Name</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates modi obcaecati
-                        in perspiciatis consequatur!</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus unde
+                        veniam, eos sequi libero veritatis repellat explicabo maxime facilis!</p>
+                    <p>-Client Name</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates modi obcaecati
-                        in perspiciatis consequatur!</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aut velit cum vel
+                        quidem magnam ipsum omnis. Est eveniet veniam ex? Consequatur, fuga ab vel vitae
+                        repellat fugiat libero dignissimos totam nemo quas iusto cum.</p>
+                    <p>-Client Name</p>
                 </div>
             </div>
         </div>
@@ -177,9 +203,9 @@
             </div>
         </div>
 
-        <div class="bg-dark text-white">
+        <div class="bg-dark text-white text-center">
             <hr>
-            <h4>&copy; All Rights Reserved</h4>
+            <h4>copywright &copy; Wanderer</h4>
         </div>
     </footer>
     
