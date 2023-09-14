@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wanderer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -25,14 +25,19 @@
             color: black;
         }
 
-        .my-sec{
-            border: 2px solid br;
-        }
-
         .my-card{
             display: flex;
             align-items: center;
             justify-content: center
+        }
+
+        header{
+            height: 70vh;
+            background-image: url('https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2018/05/Brooklyn-Bridge-Park-2.jpg?resize=1500%2C979&ssl=1');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -41,22 +46,24 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-lite">
         <div class="container">
             <a class="navbar-brand" href="#">WANDERER</a>
-            <div class="collapse navbar-collapse" id="navbarID">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarID">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="">HOME</a>
-                    <a class="nav-link active" aria-current="page" href="">DESTINATIONS</a>
-                    <a class="nav-link active" aria-current="page" href="">CRUSES</a>
-                    <a class="nav-link active" aria-current="page" href="">SPECIALS</a>
-                    <a class="nav-link active" aria-current="page" href="">HOLIDAYS</a>
-                    <a class="nav-link active" aria-current="page" href="">BLOG</a>       
-                    <a class="nav-link active" aria-current="page" href="">SEARCH</a>       
+                    <a class="nav-link" aria-current="page" href="">DESTINATIONS</a>
+                    <a class="nav-link" aria-current="page" href="">CRUSES</a>
+                    <a class="nav-link" aria-current="page" href="">SPECIALS</a>
+                    <a class="nav-link" aria-current="page" href="">HOLIDAYS</a>
+                    <a class="nav-link" aria-current="page" href="">BLOG</a>       
+                    <div class="nav-link">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>       
                 </div>
             </div>
         </div>
     </nav>
 
     <header class="bg-dark text-white">
-        <div class="container py-4">
+        <div class="container">
             <h1 class="text-center">TO TRAVEL IS TO LOVE</h1>
             <h5 class="text-center">You Don't need Magic to Disappear. All you need is a Destination</h5>
             <div class="text-center">
@@ -66,12 +73,12 @@
         </div>
     </header>
 
-    <section class="row p-2 my-sec">
-        <div class="col-md-2 text-end">
+    <section class="row p-2 text-white bg-dark">
+        <div class="col-md-3 text-end" style="border-right: 1px solid rgb(14, 13, 30);">
             <h6>Find Your</h6>
             <h5>Holidays</h5>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9">
             <label for="where">Where</label>
             <input class="my-input" type="text" placeholder="destination">
             <label for="when">When</label>
@@ -196,16 +203,75 @@
     <footer class="bg-dark text-white">
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
+
+                <div class="col-md-3">
+                    <h4>Newsletter</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo commodi
+                        aliquid totam. Eos atque quibusdam quisquam qui!</p>
+                    <input class="" type="text" placeholder="newsletter">
+                    <button for="when">Go</button>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="" class="text-white d-block">Weather</a></li>
+                        <li><a href="" class="text-white d-block">Currency Convertor</a></li>
+                        <li><a href="" class="text-white d-block">World Time & Date</a></li>
+                        <li><a href="" class="text-white d-block">Tourism & Travel News</a></li>
+                    </ul>       
+                </div>
+
+                <div class="col-md-2">
+                    <h4>Social Media</h4>
+                    <h6 class="mb-3">
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="" class="text-white">Facebook</a>
+                    </h6>
+                    <h6 class="mb-3">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="" class="text-white">Instagram</a>
+                    </h6>
+                    <h6 class="mb-3">
+                        <i class="fa-brands fa-youtube"></i>
+                        <a href="" class="text-white">YouTube</a>
+                    </h6>
+                    <h6 class="mb-3">
+                        <i class="fa-brands fa-twitter"></i>
+                        <a href="" class="text-white">Twitter</a>
+                    </h6>
+                    <h6 class="mb-3">
+                        <i class="fa-brands fa-threads"></i>
+                        <a href="" class="text-white">Threads</a>
+                    </h6>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Address</h4>
+                    <h6 class="mb-3 d-flex">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Shop No.8 Gurunanak Market Near Atul Kataria Chowk Gurgoun</p>
+                    </h6>
+                    <h6 class="mb-3 d-flex">
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="" class="text-white"> info@wanderer.com</a>
+                    </h6>
+                    <h6 class="mb-3 d-flex">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>+91 9876543210</p>
+                    </h6>
+                    <h6 class="mb-3 d-flex">
+                        <i class="fa-brands fa-facebook"></i>
+                        <a href="" class="text-white"> www.wanderer.com</a>
+                    </h6>
+                </div>
+                
             </div>
         </div>
 
         <div class="bg-dark text-white text-center">
             <hr>
-            <h4>copywright &copy; Wanderer</h4>
+            <h4>Copywright &copy;Wanderer All Rights Reserved</h4>
         </div>
     </footer>
     
