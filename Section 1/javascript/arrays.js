@@ -49,5 +49,7 @@ console.log(add_element([1,2,3,4,5,6], 4, 9));
 alpha = ['a', 'b', 'c', 'd', 'e']
 
 // Object.defineProperty(Array.prototype, 'add_element', {
-//     value: function(id, ele) {return [...this.slice(0,id), ele, ...this.slice(id)];}
+//     value: function(index, ele) { return [ ...this.slice(0, index), ele, ...this.slice(index) ]; },
 // });
+
+// console.log(movies.add_element(2, 'x'));
