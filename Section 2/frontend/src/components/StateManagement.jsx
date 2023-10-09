@@ -35,7 +35,7 @@ const StateManagement = () => {
             <button className='btn btn-danger' onClick={addComment}>{comment} Add Comment</button>
             <button className='btn btn-success' onClick={addShare}>{share} Add Share</button>
 
-            <img width={width} src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Doctor_Strange_MCU_logo.webp/800px-Doctor_Strange_MCU_logo.webp.png" alt="" />
+            <img width={width} id='myimg' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Doctor_Strange_MCU_logo.webp/800px-Doctor_Strange_MCU_logo.webp.png" alt="" />
          
             <input 
             className='form-range'
@@ -43,6 +43,12 @@ const StateManagement = () => {
             min={0}
             max={400}
             onChange={(e) => { setWidth(e.target.value) }} />
+
+            <input type="range"
+            min={0}
+            max={360}
+            onChange={(e) => {document.querySelector('#myimg').style.transform=`rotate(${e.target.value}deg)`
+            }} />
 
             <h3>Insert Image Link Here</h3>
             <input type="text" className='form-control' onChange={e => setImageLink(e.target.value)} />

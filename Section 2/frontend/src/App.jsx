@@ -9,10 +9,12 @@ import Navbar from "./components/Navbar";
 import EventHandling from "./components/EventHandling";
 import StateManagement from "./components/StateManagement";
 import Todo from "./components/Todo";
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
   return (
     <div>
+      <Toaster position="top-right"/>
       <BrowserRouter>
         {/* <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
