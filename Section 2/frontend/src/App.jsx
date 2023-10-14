@@ -11,12 +11,14 @@ import StateManagement from "./components/StateManagement";
 import Todo from "./components/Todo";
 import { Toaster } from "react-hot-toast"
 import Chat from "./components/chat";
+import {AnimatePresence} from 'framer-motion'
 
 const App = () => {
   return (
     <div>
       <Toaster position="top-right"/>
       <BrowserRouter>
+      <AnimatePresence>
         {/* <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
         <Link to="/login">Login</Link> */}
@@ -33,6 +35,7 @@ const App = () => {
           <Route path="*" element={ <NotFound /> } />
 
         </Routes>
+      </AnimatePresence>
       </BrowserRouter>
     </div>
   );

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from 'react'
 
 const Chat = () => {
@@ -23,9 +24,13 @@ const Chat = () => {
         <div className="card w-75 mx-auto">
           <div className="card-body d-flex flex-column justify-content-end" style={{height:'60vh', overflow:'auto'}}>
             {sendMessage.map((msg) => (
-              <div className='border p-3 d-flex justify-content-end alert alert-primary' key={msg}>
+              <motion.div
+                className='border p-3 d-flex justify-content-end alert alert-primary'
+                key={msg}
+                initial={{x:'100%'}}
+                animate={{x:0}}>
                 <h3>{msg}</h3>
-              </div>
+              </motion.div>
             ))}
           </div>
 
