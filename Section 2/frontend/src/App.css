@@ -9,3 +9,9 @@
   color: crimson !important;
   border-bottom: 2px solid crimson;
 }
+
+.error-label{
+  color: crimson;
+  font-size: 15px;
+  margin-left: 10px;
+}
