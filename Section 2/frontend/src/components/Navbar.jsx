@@ -56,6 +56,11 @@ const Navbar = () => {
             Chat
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/booking">
+            Booking
+          </NavLink>
+        </li>
       
         <li className="nav-item">
           <a className="nav-link disabled" aria-disabled="true">

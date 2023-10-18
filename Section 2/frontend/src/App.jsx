@@ -12,6 +12,7 @@ import Todo from "./components/Todo";
 import { Toaster } from "react-hot-toast"
 import Chat from "./components/chat";
 import {AnimatePresence} from 'framer-motion'
+import Booking from "./components/Booking";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/state" element={ <StateManagement /> } />
           <Route path="/todo" element={ <Todo /> } />
           <Route path="/chat" element={ <Chat /> } />
+          <Route path="/booking" element={ <Booking /> } />
 
           <Route path="*" element={ <NotFound /> } />
 
