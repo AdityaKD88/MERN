@@ -1,9 +1,16 @@
 // import express
 const express = require('express');
+const UserRouter = require('./routers/userRouter');
+const ProductRouter = require('./routers/productRouter');
 
 // initialize express
 const app = express();
 const port = 5000;
+
+// middleware
+app.use(express.json());
+app.use('/user', UserRouter);
+app.use('/product', ProductRouter);
 
 // creating a route (routing)
 app.get('/', (req, res) => {
