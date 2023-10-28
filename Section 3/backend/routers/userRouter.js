@@ -18,23 +18,87 @@ router.post('/add', (req, res) => {
 });
 
 router.get('/getall', (req, res) => {
-    res.send('getall response from user');
+    Model.find()
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+
+    // res.send('getall response from user');
 });
 
-router.get('/getbyemail', (req, res) => {
-    res.send('getbyemail response from user');
+// : denotes URL parameter
+router.get('/getbyemail/:email', (req, res) => {
+    console.log(req.params.email);
+
+    Model.find({email: req.params.email})
+    .then((result) => {
+        res.status(200).json(result)
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+    });
+    
+    // res.send('getbyemail response from user');
 });
 
-router.get('/getbyid', (req, res) => {
-    res.send('getbyid response from user');
+router.get('/getbyname/:name', (req,res) => {
+    console.log(req.params.name);
+
+    Model.find({name: req.params.name})
+    .then((result) => {
+        res.status(200).json(result)
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+    });
+})
+
+router.post('/authenticate', (req,res) => {
+    Model.findOne(req.body)
+    .then((result) => {
+        res.status(200).json(result)
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+    });
+})
+
+router.get('/getbyid/:id', (req, res) => {
+    Model.findById(req.params.id)
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+    // res.send('getbyid response from user');
 });
 
-router.get('/update', (req, res) => {
-    res.send('update response from user');
+router.put('/update/:id', (req, res) => {
+    Model.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+    });
+
+    // res.send('update response from user');
 });
 
-router.get('/delete', (req, res) => {
-    res.send('delete response from user');
+router.delete('/delete/:id', (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+    });
+
+    // res.send('delete response from user');
 });
 
 module.exports = router;
