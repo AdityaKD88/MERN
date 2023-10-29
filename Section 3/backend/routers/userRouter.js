@@ -14,7 +14,6 @@ router.post('/add', (req, res) => {
         res.status(500).json(err);
     });
 
-    // res.send('add response from user');
 });
 
 router.get('/getall', (req, res) => {
@@ -59,7 +58,8 @@ router.get('/getbyname/:name', (req,res) => {
 router.post('/authenticate', (req,res) => {
     Model.findOne(req.body)
     .then((result) => {
-        res.status(200).json(result)
+        if(result) res.status(200).json(result)
+        else res.status(401).json({status: 'failed'})
     }).catch((err) => {
         console.log(err);
         res.status(500).json(err)

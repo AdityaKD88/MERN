@@ -1,5 +1,7 @@
 import { useFormik } from "formik";
+import { enqueueSnackbar } from "notistack";
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
@@ -14,6 +16,8 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
 
+  const navigate = useNavigate();
+
   // initialize formik
   const signupForm = useFormik({
     initialValues:{
@@ -22,7 +26,37 @@ const Signup = () => {
       password: ''
     },
 
-    onSubmit: (values) => { console.log(values); },
+    onSubmit: async (values, {resetForm}) => {
+      console.log(values);
+      const res = await fetch('http://localhost:5000/user/add', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type' : 'application/json'
+        },
+      });
+      console.log(res.status);
+
+      if(res.status === 200){
+        resetForm()
+        enqueueSnackbar('Registration Successful', {
+          variant:'success',
+          anchorOrigin:{
+            vertical:'top',
+            horizontal:'right'
+          }
+        })
+        navigate('/login')
+      }else{
+        enqueueSnackbar('Something went Wrong', {
+          variant:'error',
+          anchorOrigin:{
+            vertical:'top',
+            horizontal:'right'
+          }
+        })
+      }
+    },
     
     validationSchema: SignupSchema
   })

@@ -13,12 +13,14 @@ import { Toaster } from "react-hot-toast"
 import Chat from "./components/chat";
 import {AnimatePresence} from 'framer-motion'
 import Booking from "./components/Booking";
+import { SnackbarProvider } from "notistack";
 
 const App = () => {
   return (
     <div>
       <Toaster position="top-right"/>
       <BrowserRouter>
+      <SnackbarProvider>
       <AnimatePresence>
         {/* <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
@@ -38,6 +40,7 @@ const App = () => {
 
         </Routes>
       </AnimatePresence>
+      </SnackbarProvider>
       </BrowserRouter>
     </div>
   );
