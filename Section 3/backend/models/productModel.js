@@ -1,8 +1,10 @@
 const {Schema, model} = require('../connection');
 
 const myschema = new Schema({
-    id: String,
+    pid: Integer,
     pname: String,
+    cname: String,
+    pmodel: String,
     price: String
 });
 

@@ -13,8 +13,6 @@ router.post('/add', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-
-    // res.send('add response from product');
 });
 
 router.get('/getall', (req, res) => {
@@ -25,24 +23,48 @@ router.get('/getall', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-
-    // res.send('getall response from product');
 });
 
-router.get('/getbybrand', (req, res) => {
-    res.send('getbybrand response from product');
+router.get('/getbypid/:pid', (req, res) => {
+    console.log(req.params.pid);
+
+    Model.find({pid: req.params.pid})
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
-router.get('/getbyid', (req, res) => {
-    res.send('getbyid response from product');
+router.get('/getbyid/:id', (req, res) => {
+    Model.findById(req.params.id)
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
-router.get('/update', (req, res) => {
-    res.send('update response from product');
+router.put('/update/:id', (req, res) => {
+    Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
-router.get('/delete', (req, res) => {
-    res.send('delete response from product');
+router.delete('/delete/:id', (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;
