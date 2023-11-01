@@ -39,7 +39,7 @@ const Booking = () => {
   })
 
   return (
-    <div className='vh-100 bg-body-secondary'>
+    <div className='vh-120 bg-body-secondary'>
       <div className="col-md-4 mx-auto py-5">
         <div className="card">
           <div className="card-body">

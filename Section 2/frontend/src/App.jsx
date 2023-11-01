@@ -14,6 +14,7 @@ import Chat from "./components/chat";
 import {AnimatePresence} from 'framer-motion'
 import Booking from "./components/Booking";
 import { SnackbarProvider } from "notistack";
+import AddProduct from "./components/AddProduct";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/todo" element={ <Todo /> } />
           <Route path="/chat" element={ <Chat /> } />
           <Route path="/booking" element={ <Booking /> } />
+          <Route path="/addproduct" element={ <AddProduct /> } />
 
           <Route path="*" element={ <NotFound /> } />
 
