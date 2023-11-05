@@ -15,6 +15,9 @@ import {AnimatePresence} from 'framer-motion'
 import Booking from "./components/Booking";
 import { SnackbarProvider } from "notistack";
 import AddProduct from "./components/AddProduct";
+import ManageUser from "./components/ManageUser";
+import ProductList from "./components/ProductList";
+import UpdateUser from "./components/UpdateUser";
 
 const App = () => {
   return (
@@ -37,6 +40,9 @@ const App = () => {
           <Route path="/chat" element={ <Chat /> } />
           <Route path="/booking" element={ <Booking /> } />
           <Route path="/addproduct" element={ <AddProduct /> } />
+          <Route path="/manageuser" element={ <ManageUser /> } />
+          <Route path="/updateuser/:id" element={ <UpdateUser /> } />
+          <Route path="/productlist" element={ <ProductList /> } />
 
           <Route path="*" element={ <NotFound /> } />
 

@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#005d8d'}}>
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
       Navbar
@@ -66,13 +66,18 @@ const Navbar = () => {
             Add Product
           </NavLink>
         </li>
-      
         <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">
-            Disabled
-          </a>
+          <NavLink className="nav-link" to="/manageuser">
+            Manage User
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/productlist">
+            Product List
+          </NavLink>
         </li>
       </ul>
+
       <form className="d-flex" role="search">
         <input
           className="form-control me-2"
