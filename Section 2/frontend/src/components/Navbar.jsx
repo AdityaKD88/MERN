@@ -1,7 +1,44 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const navigate = useNavigate();
+  const logout = () => {
+    sessionStorage.removeItem('user');
+    setCurrentUser(null);
+    navigate('/login');
+  }
+
+  const displayLoginOptions = () => {
+    if(currentUser !== null){
+      return <>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/todo">
+            To Do
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <button className='btn btn-danger' onClick={logout}>Logout</button>
+        </li>
+      </>
+    }else{
+      return <>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/register">
+            Register
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/login">
+            Login
+          </NavLink>
+        </li>
+      </>
+    }
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#005d8d'}}>
   <div className="container-fluid">
@@ -27,16 +64,6 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/register">
-            Register
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/login">
-            Login
-          </NavLink>
-        </li>
-        <li className="nav-item">
           <NavLink className="nav-link" to="/eventhandling">
             Event Handling
           </NavLink>
@@ -44,11 +71,6 @@ const Navbar = () => {
         <li className="nav-item">
           <NavLink className="nav-link" to="/state">
             State Management
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/todo">
-            To Do
           </NavLink>
         </li>
         <li className="nav-item">
@@ -76,6 +98,8 @@ const Navbar = () => {
             Product List
           </NavLink>
         </li>
+
+        {displayLoginOptions()}
       </ul>
 
       <form className="d-flex" role="search">
@@ -85,7 +109,7 @@ const Navbar = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <button className="btn btn-outline-success" type="submit">
+        <button className="btn btn-outline-dark" type="submit">
           Search
         </button>
       </form>
