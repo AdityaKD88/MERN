@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import useAppContext from '../AppContext';
 
-const Navbar = () => {
+const Navbar = ({cartItems}) => {
+
+  const {loggedIn, setLoggedIn} = useAppContext();
 
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   const navigate = useNavigate();
@@ -9,10 +12,11 @@ const Navbar = () => {
     sessionStorage.removeItem('user');
     setCurrentUser(null);
     navigate('/login');
+    setLoggedIn(false);
   }
 
   const displayLoginOptions = () => {
-    if(currentUser !== null){
+    if(loggedIn){
       return <>
         <li className="nav-item">
           <NavLink className="nav-link" to="/todo">
@@ -100,6 +104,9 @@ const Navbar = () => {
         </li>
 
         {displayLoginOptions()}
+        <li className='nav-item my-auto text-white'>
+          <h5>Cart Items : {cartItems}</h5>
+        </li>
       </ul>
 
       <form className="d-flex" role="search">

@@ -18,37 +18,41 @@ import AddProduct from "./components/AddProduct";
 import ManageUser from "./components/ManageUser";
 import ProductList from "./components/ProductList";
 import UpdateUser from "./components/UpdateUser";
+import UserAuth from "./UserAuth";
+import { AppProvider } from "./AppContext";
 
 const App = () => {
   return (
     <div>
       <Toaster position="top-right"/>
       <BrowserRouter>
-      <SnackbarProvider>
-      <AnimatePresence>
-        {/* <Link to="/">Home</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/login">Login</Link> */}
-        <Navbar/>
-        <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/register" element={ <Signup /> } />
-          <Route path="/login" element={ <Login /> } />
-          <Route path="/eventhandling" element={ <EventHandling /> } />
-          <Route path="/state" element={ <StateManagement /> } />
-          <Route path="/todo" element={ <Todo /> } />
-          <Route path="/chat" element={ <Chat /> } />
-          <Route path="/booking" element={ <Booking /> } />
-          <Route path="/addproduct" element={ <AddProduct /> } />
-          <Route path="/manageuser" element={ <ManageUser /> } />
-          <Route path="/updateuser/:id" element={ <UpdateUser /> } />
-          <Route path="/productlist" element={ <ProductList /> } />
+        <SnackbarProvider>
+          <AppProvider>
+          <AnimatePresence>
+            {/* <Link to="/">Home</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link> */}
+            <Navbar cartItems={10}/>
+            <Routes>
+              <Route path="/" element={ <Home /> } />
+              <Route path="/register" element={ <Signup /> } />
+              <Route path="/login" element={ <Login /> } />
+              <Route path="/eventhandling" element={ <EventHandling /> } />
+              <Route path="/state" element={ <UserAuth> <StateManagement /> </UserAuth> } />
+              <Route path="/todo" element={ <UserAuth> <Todo /> </UserAuth> } />
+              <Route path="/chat" element={ <Chat /> } />
+              <Route path="/booking" element={ <Booking /> } />
+              <Route path="/addproduct" element={ <AddProduct /> } />
+              <Route path="/manageuser" element={ <ManageUser /> } />
+              <Route path="/updateuser/:id" element={ <UpdateUser /> } />
+              <Route path="/productlist" element={ <ProductList /> } />
 
-          <Route path="*" element={ <NotFound /> } />
+              <Route path="*" element={ <NotFound /> } />
 
-        </Routes>
-      </AnimatePresence>
-      </SnackbarProvider>
+            </Routes>
+          </AnimatePresence>
+          </AppProvider>
+        </SnackbarProvider>
       </BrowserRouter>
     </div>
   );
