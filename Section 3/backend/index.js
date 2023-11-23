@@ -19,6 +19,8 @@ app.use('/user', UserRouter);
 app.use('/product', ProductRouter);
 app.use('/util', UtilRouter);
 
+app.use(express.static('./uploads'));
+
 // creating a route (routing)
 app.get('/', (req, res) => {
     res.send('response from express server');

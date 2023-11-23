@@ -120,6 +120,7 @@ const ManageUser = () => {
 
                 <thead>
                     <tr>
+                        <th>Avatar</th>
                         <th>ID</th>
                         <th>Email</th>
                         <th>Name</th>
@@ -133,6 +134,9 @@ const ManageUser = () => {
                     {
                         userList.map( (user) => (
                             <tr>
+                                <td>
+                                    <img height={50} src={"http://localhost:5000/"+user.avatar} alt="" />
+                                </td>
                                 <td>{user._id}</td>
                                 <td>{user.email}</td>
                                 <td>{user.name}</td>
